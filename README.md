@@ -3,7 +3,7 @@
 
 
 
-![dorsal_skull](dorsal_skull.JPG)
+![skull_landmarks](skull_landmarks.JPG)
 
 
 <sup>Image: A stylised dolphin skull showing the landmarks and semi-landmarks used in this study </sup>
