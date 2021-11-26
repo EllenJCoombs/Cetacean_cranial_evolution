@@ -2,9 +2,9 @@
 # Making waves: the rising and falling tempo of cetacean cranial evolution 
 
 
-![owl_asymmetry](owl_asymmetry.jpg)
+![dorsal_skull](dorsal_skull.jpg)
 
-<sup>Image: a stylised owl skull showing cranial asymmetry. Credit: [British Trust for Ornithology](https://www.bto.org/our-science/projects/project-owl/learn-about-owls/owl-hearing)</sup>
+<sup>Image: A stylised dolphin skull showing the landmarks and semi-landmarks used in this study </sup>
 
 
 __Authors:__
