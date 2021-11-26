@@ -2,7 +2,7 @@
 # Making waves: the rising and falling tempo of cetacean cranial evolution 
 
 
-![dorsal_skull](dorsal_skull.jpg)
+![dorsal_skull_](dorsal_skull.jpeg)
 
 <sup>Image: A stylised dolphin skull showing the landmarks and semi-landmarks used in this study </sup>
 
