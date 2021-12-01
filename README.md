@@ -4,7 +4,7 @@
 
 
 ![Resampledcurves](Resampledcurves.JPG)
-<sup>Image: A stylised dolphin skull showing the landmarks and semi-landmarks used in this study </sup>
+<sup>Image: Resampled curves on cetacean skulls </sup>
 
 
 __Authors:__
