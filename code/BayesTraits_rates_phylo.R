@@ -7,9 +7,6 @@
 #                                              #
 ################################################
 
-
-
-
 library(here)
 library(phytools)
 library(deeptime)
@@ -19,6 +16,7 @@ library(plyr)
 library(dplyr)
 library(ggplot2)
 library(BTRTools)
+
 #Run this function first 
 
 #uses treeio to combine tree topology and BayesTraits posterior into single S4 object for plotting.
