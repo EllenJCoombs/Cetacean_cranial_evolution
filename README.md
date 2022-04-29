@@ -1,5 +1,5 @@
 
-# Making waves: the rising and falling tempo of cetacean cranial evolution 
+# The tempo of cetacean cranial evolution
 
 
 
@@ -8,12 +8,13 @@
 
 
 __Authors:__
-[Ellen J. Coombs](mailto:ellen.coombs.14@ucl.ac.uk),
-Ryan Felice
+
+[Ellen J. Coombs](mailto:ellen.coombs.14@ucl.ac.uk), Ryan. N Felice, [Julien Clavel](https://github.com/JClavel), [Travis Park](https://github.com/travispark), Rebecca Bennion, Morgan Churchill, Jonathan Geisler, Brian Beatty, [Anjali Goswami](https://github.com/anjgoswami)
+
 
 __To cite the paper__: 
 
->
+
 
 Available at: 
 
