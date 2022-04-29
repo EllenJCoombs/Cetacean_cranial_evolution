@@ -30,7 +30,7 @@ __To cite this repo__:
 
 Github: https://github.com/EllenJCoombs/Cetacean_cranial_evolutions plus the Zenodo DOI: 
 
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6506812.svg)](https://doi.org/10.5281/zenodo.6506812)
 
 
 ## Data :bar_chart: :chart_with_downwards_trend: 
