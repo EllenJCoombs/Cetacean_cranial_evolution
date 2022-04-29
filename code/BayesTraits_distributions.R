@@ -7,8 +7,6 @@
 ##############################################
 
 
-
-
 rate_summary <- function(rjpp_out, time_tree, lookup.table, group_column, taxa, min_clade_size=2){
   #select the species from  the lookup table that are part of the current dataset
   lookup.table <- rename(lookup.table, GROUP = group_column)
@@ -143,5 +141,4 @@ p3 <- p2 %+% results4$odontocete
 p1 + p2 + p3 + plot_layout(ncol = 1)
 
 ggplotly(p3)                              
-                                    
-  
+                                   
