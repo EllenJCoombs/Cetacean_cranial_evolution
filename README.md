@@ -21,8 +21,8 @@ Brian Beatty,
 
 __To cite the paper__: 
 
->Coombs EJ, Felice RN, Clavel J, Park T, Bennion R, Churchill M, Geisler J, Beatty B, Goswami A. The tempo of cetacean cranial evolution. Current Biology. 2022.
-Details available at: https://github.com/EllenJCoombs/Cetacean_cranial_evolutions
+>Coombs EJ, Felice RN, Clavel J, Park T, Bennion R, Churchill M, Geisler J, Beatty B, Goswami A. The tempo of cetacean cranial evolution. Current Biology. 2022. 
+Details available at: https://github.com/EllenJCoombs/Cetacean_cranial_evolution
 
 If using any of this code or data please cite the paper above and this repo
 
