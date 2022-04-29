@@ -1,7 +1,7 @@
 
 
-###########################################################################
-##                    RESAMPLING AU PLUS PROCHE                           ##
+############################################################################
+##                    RESAMPLING                                          ##
 ############################################################################
 	cursub.closer<-function(cur,req)
 		{
@@ -40,7 +40,7 @@
 				}
 			output	
 		}
-## penser faire un check pour les doublons, la prise de point anatomique comme point de courbe... bref c'est un peu dangereux si on a pas nbptsinitial>>nptsrequis
+## think about doing a check for duplicates, taking an anatomical point as a curve point... in short, it's a little dangerous if you don't have nbptsinitial>>nptsrequired
 
 ############################################################################
 ##                    RESAMPLING AVEC INTEPOLATION                        ##
@@ -49,30 +49,30 @@
 cursub.interpo<-function(cur,req)
 {
 mat<-as.matrix(dist(cur))
-DPO<-NULL									#DPO= distance pt to pt originale
+DPO<-NULL									#DPO= distance pt to pt original
 	for (j in 1:nrow(cur)-1)
 		{
 			a<-mat[j+1,j]
 			DPO<-c(DPO,a)
 		}
-DCO<-NULL									#DCO= DIstance cordale au point initial originale
+DCO<-NULL									#DCO= Chordal distance to the original initial point
 	for (j in 1:length(DPO))
 		{
 			DCO[j]<-sum(DPO[1:j])
 		}
 
-DN<-sum(DPO)/(req+1)								#Distance totale/nb de points = distance entre 2 points qui seront crÃ©Ã©s (+1 car pour n points requis, il y a n+1 intervalespuisqu'on ne compte pas les points initiaux et terminaux qui sont anatomiques.
-DCN<-DN*(1:(req))  								#DCN= distance entre le point initial et les nouveaux points
-proxima <- matrix(nrow=req,ncol=2)						#matrice contenant les points les plus proches
+DN<-sum(DPO)/(req+1)								#Total distance/nb of points = distance between 2 points which will be created (+1 because for n points required, there are n+1 intervals since the initial and terminal points which are anatomical are not counted.
+DCN<-DN*(1:(req))  								#DCN= distance between the initial point and the new points
+proxima <- matrix(nrow=req,ncol=2)						#matrix containing nearest points
 for (k in 1:length(DCN))
 	{
-		first <- which.min(abs(DCO- DCN[k]))				#point le plus proche
+		first <- which.min(abs(DCO- DCN[k]))				#nearest point
 		proxima[k,1] <- first
 		second <- which.min(abs(DCO[-first]- DCN[k]))
-		ifelse(first==second,second<-(second+1),second<-second)		#vu qu'on vire le pt le + proche du vecteur si first=second, second est en rÃ©alitÃ© le point first+1
+		ifelse(first==second,second<-(second+1),second<-second)		#since we turn the pt closest to the vector if first=second, second is actually the point first+1
 		proxima[k,2] <- second#second point les plus proche
 	}
-proxima<-proxima+1 								#car dist du 1er pt Ã  lui meme=0 du coup il n'apparait pas dans les mesures de dist length =5 pour 6pt)
+proxima<-proxima+1 								#because dist of the 1st pt to itself=0 suddenly it does not appear in the measurements of dist length =5 for 6pt)
 proxima2 <- matrix(nrow=req,ncol=2)
 for (i in 1:req)
 	{
@@ -81,21 +81,21 @@ for (i in 1:req)
 		proxima2[i,1]<-proxima[i,2];proxima2[i,2]<-proxima[i,1]}
 		else if (proxima[i,1]<proxima[i,2]){
 		proxima2[i,1]<-proxima[i,1];proxima2[i,2]<-proxima[i,2]}
-	}									#remise des points dans l'ordre d'index croissant (si le point le plus proche est d'un rowindex plus Ã©levÃ© que le second point le plus proche)
-VEC<-matrix( nrow=req, ncol = 3)						#VEC=vecteur du point proximal[n,1] au point proximal[n,2]
+	}									#reset points in ascending index order (if nearest point is one rowindex higher than second-nearest point)
+VEC<-matrix( nrow=req, ncol = 3)						#VEC=vector from proximal point[n,1] to proximal point[n,2]
 for(l in 1:req)
 	{
 		VEC[l,]<-as.matrix(cur[proxima2[l,2],]-cur[proxima2[l,1],])
 	}
-COMP<-NULL									#COMP=distance entre le point Ã  crÃ©er et le point proximal[n,i]
+COMP<-NULL									#COMP=distance between the point to create and the proximal point[n,i]
 for(n in 1:req)
 	{
-		COMP[n]<-DCN[n]-DCO[proxima2[n,1]-1]				#car DCO fait p-1 point car dist cordale du premier point Ã  lui meme=0
+		COMP[n]<-DCN[n]-DCO[proxima2[n,1]-1]				#because DCO makes p-1 point because cordal distance from the first point to itself=0
 	}
-NOR<-NULL  									#Norme Ã  appliquer au vecteur
+NOR<-NULL  									#Norm to apply to the vector
 for(m in 1:req)
 	{
-		NOR[m]<-COMP[m]/(DPO[proxima2[m,1]])				####corrigee le 20-07-15
+		NOR[m]<-COMP[m]/(DPO[proxima2[m,1]])				####corrected on 20-07-15
 	}
 VECF<-VEC*NOR
 PTS<-cur[proxima2[,1],]+VECF
