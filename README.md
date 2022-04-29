@@ -9,12 +9,20 @@
 
 __Authors:__
 
-[Ellen J. Coombs](mailto:ellen.coombs.14@ucl.ac.uk), Ryan. N Felice, [Julien Clavel](https://github.com/JClavel), [Travis Park](https://github.com/travispark), Rebecca Bennion, Morgan Churchill, Jonathan Geisler, Brian Beatty, [Anjali Goswami](https://github.com/anjgoswami)
+[Ellen J. Coombs](mailto:ellen.coombs.14@ucl.ac.uk), 
+[Ryan. N Felice](https://github.com/rnfelice), 
+[Julien Clavel](https://github.com/JClavel), 
+[Travis Park](https://github.com/travispark), 
+Rebecca Bennion, Morgan Churchill, 
+Jonathan Geisler, 
+Brian Beatty, 
+[Anjali Goswami](https://github.com/anjgoswami)
 
 
 __To cite the paper__: 
 
-
+>Coombs EJ, Felice RN, Clavel J, Park T, Bennion R, Churchill M, Geisler J, Beatty B, Goswami A. The tempo of cetacean cranial evolution. Current Biology. 2022.
+Github: https://github.com/EllenJCoombs/Asymmetry-evolution-cetaceans plus the Zenodo DOI: https://doi.org/10.5281/zenodo.3893943
 
 Available at: 
 
