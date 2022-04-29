@@ -35,7 +35,7 @@ Github: https://github.com/EllenJCoombs/Cetacean_cranial_evolutions plus the Zen
 
 ## Data :bar_chart: :chart_with_downwards_trend: 
 
-The data are provided in the `Raw data` folder
+The data are provided in the `data` folder
 1. `absent.csv`- bones that are variably present in some species 
 2. `new curves_archs_odonts.csv` - LM and curve configuration used for archaeocetes and odontocetes 
 3. `new curves_mysts.csv` - LM and curve configuration used for mysticetes 
