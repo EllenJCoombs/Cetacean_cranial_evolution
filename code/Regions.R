@@ -1,9 +1,4 @@
 
-
-library(geomorph)
-library(ape)
-library(rgl)
-
 ###########################################
 #                                         #
 #     Read in your tree and species data  #
@@ -11,6 +6,11 @@ library(rgl)
 #     odonts                              #
 #                                         #
 ###########################################
+
+
+library(geomorph)
+library(ape)
+library(rgl)
 
 
 #species data 
@@ -77,7 +77,6 @@ spheres3d(final_procrusted_DATA[nas,,146], radius = 0.0002, col = 'red')
 #text3d(arranged[nas,,3], text=nas)
 #text3d(slidedlmsMYSTS_plot[nas,,34], text=nas, col = 'blue')
 
-
 #pull out the modules 
 premax <- which(regionsALLMYSTS$bone=="premax")
 #plot them to check 
@@ -91,20 +90,17 @@ maxilla <- which(regionsALLMYSTS$bone=="maxilla")
 spheres3d(final_procrusted_ODONTS[maxilla,,99], radius =  0.0002)
 #text3d(final_mirrored_mysts[maxilla,,1], text= regionsALLMYSTS$lm)
 
-
 #pull out the modules 
 frontal <- which(regionsALLMYSTS$bone=="frontal")
 #plot them to check 
 spheres3d(final_procrusted_ODONTS[frontal,, 13], radius =  0.0002)
 #text3d(shapedata[frontal,,42], text=frontal)
 
-
 #pull out the modules 
 pteryg <- which(regionsALLMYSTS$bone=="pterygoid")
 #plot them to check 
 spheres3d(final_procrusted_ODONTS[pteryg,,3], radius = 0.0002, col = 'green')
 #text3d(shapedata[pteryg,,42], text=pteryg)
-
 
 #pull out the modules 
 pal <- which(regionsALLMYSTS$bone=="palate")
@@ -130,13 +126,11 @@ basisphen <- which(regionsALLMYSTS$bone=="basisphenoid")
 spheres3d(final_procrusted_ODONTS[basisphen,,1], radius =  0.0002)
 #text3d(shapedata[basisphen,,42], text=basisphen)
 
-
 #pull out the modules 
 mandp <- which(regionsALLMYSTS$bone=="mandibular process")
 #plot them to check 
 spheres3d(final_procrusted_ODONTS[mandp,,1], radius =  0.0002)
 #text3d(shapedata[mandp,,42], text=mandp)
-
 
 #pull out the modules 
 occipcon <- which(regionsALLMYSTS$bone=="occipital")
@@ -144,13 +138,11 @@ occipcon <- which(regionsALLMYSTS$bone=="occipital")
 spheres3d(final_procrusted_ODONTS[occipcon,,1], radius =  0.0002)
 #text3d(shapedata[occipcon,,42], text=occipcon)
 
-
 #pull out the modules 
 jug <- which(regionsALLMYSTS$bone=="jugal")
 #plot them to check 
 spheres3d(final_procrusted_ODONTS[jug,,1], radius =  0.0002)
 #text3d(shapedata[jug,,2], text=jug)
-
 
 #pull out the modules 
 parietal <- which(regionsALLMYSTS$bone=="parietal")
@@ -158,13 +150,11 @@ parietal <- which(regionsALLMYSTS$bone=="parietal")
 spheres3d(final_procrusted_ODONTS[parietal,,1], radius =  0.0002)
 #text3d(shapedata[parietal,,2], text=parietal)
 
-
 #pull out the modules 
 squa <- which(regionsALLMYSTS$bone=="squamosal")
 #plot them to check 
 spheres3d(final_procrusted_ODONTS[squa,,1], radius =  0.0002)
 #text3d(final_procrusted_ARCHS[squa,,1], text=squa)
-
 
 #pull out the modules 
 zygo <- which(regionsALLMYSTS$bone=="zygomatic")
@@ -176,8 +166,6 @@ zygo_squa <- which(regionsALLMYSTS_zygo_squa$bone=="zygo-squa")
 #plot them to check 
 spheres3d(final_procrusted_ODONTS[zygo_squa,,3], radius =  0.0002)
 #text3d(shapedata[zygo,,2], text=squa)
-
-
 
 
 #check - Procrusted
@@ -199,7 +187,6 @@ spheres3d(final_procrusted_ODONTS[parietal,,83], radius =  0.0005, color = "blac
 spheres3d(final_procrusted_ODONTS[squa,,83], radius =  0.0005, color = "darkred")
 spheres3d(final_procrusted_ODONTS[zygo_squa,,83], radius =  0.0005, color = "green")
 
-
 #check - NOT procrusted 
 
 atarfa=ply2mesh(file="D:/Ply ASCII/ply ASCII/All/ply/Delphinus delphis AMNH 75332.ply")
@@ -218,8 +205,6 @@ spheres3d(final_mirrored_odonts[jug,,24], radius =  2, color = "grey")
 spheres3d(final_mirrored_odonts[occipcon,,24], radius =  2, color = "turquoise")
 spheres3d(final_mirrored_odonts[parietal,,24], radius =  2, color = "black")
 spheres3d(final_mirrored_odonts[squa,,24], radius = 2, color = "darkred")
-
-
 
 # Dolphin for chapter 
 
@@ -242,7 +227,6 @@ spheres3d(final_dataset[zygo_squa,,48], radius = 2, color = "darkred")
 
 #spheres3d(shapedata[zygo,,42], radius =  0.0002, color = "magenta")
 
-
 #Whale for chapter 
 
 atarfa=ply2mesh(file="E:/Ply ASCII/ply ASCII/Mysts/ply/Balaenoptera musculus NHM 1892.3.1.1.ply")
@@ -264,7 +248,6 @@ spheres3d(final_mirrored_mysts[zygo_squa,,11], radius = 12, color = "darkred")
 
 #spheres3d(shapedata[zygo,,42], radius =  0.0002, color = "magenta")
 
-
 #Archaeocetes 
 atarfa=ply2mesh(file="E:/Ply ASCII/ply ASCII/Archs/ply/Zygorhiza kochi USNM 11962.ply")
 shade3d(atarfa,col='white')
@@ -282,9 +265,6 @@ spheres3d(final_mirrored_archs[jug,,1], radius =  2, color = "grey")
 spheres3d(final_mirrored_archs[occipcon,,1], radius =  2, color = "turquoise")
 spheres3d(final_mirrored_archs[parietal,,1], radius =  2, color = "black")
 spheres3d(final_mirrored_archs[zygo_squa,,1], radius = 2, color = "darkred")
-
-
-
 
 #Half skull
 atarfa=ply2mesh(file="D:/Ply ASCII/ply ASCII/All/ply/Delphinus delphis AMNH 75332.ply")
@@ -305,9 +285,6 @@ spheres3d(final_mirrored_odonts[c(25:29, 459:523),,24], radius =  2, color = "bl
 spheres3d(final_mirrored_odonts[c(30:33, 36,37, 524:608),,24], radius = 2, color = "darkred")
 #spheres3d(shapedata[zygo,,42], radius =  0.0002, color = "magenta")
 
-
-
-
 atarfa=ply2mesh(file="D:/Ply ASCII/ply ASCII/All/ply/Balaenoptera brydei USNM 572922.ply")
 shade3d(atarfa,col='white')
 spheres3d(final_mirrored_mysts[nas,,8], radius = 4, color = "red")
@@ -324,9 +301,7 @@ spheres3d(final_mirrored_mysts[jug,,8], radius =  4, color = "coral")
 spheres3d(final_mirrored_mysts[occipcon,,8], radius =  4, color = "turquoise")
 spheres3d(final_mirrored_mysts[parietal,,8], radius =  4, color = "black")
 spheres3d(final_mirrored_mysts[squa,,8], radius = 4, color = "darkred")
-#spheres3d(shapedata[zygo,,42], radius =  0.0002, color = "magenta")
-
-
+spheres3d(shapedata[zygo,,42], radius =  0.0002, color = "magenta")
 
 
 ###########################################
@@ -815,11 +790,8 @@ b = b + stat_smooth(method="lm", se=TRUE, fill=NA, formula=y ~ x,colour="blue")
 b = b + geom_text_repel(aes(label = labels))#with numbers of specimens 
 b
 
-
-
 EMR<-compare.multi.evol.rates(A=Y.gpa$coords,gp=land.gp, 
                               Subset=TRUE, phy= plethspecies$phy,iter=999)
 summary(EMR)
-
-
 plot(bones14_ODONTS)
+
