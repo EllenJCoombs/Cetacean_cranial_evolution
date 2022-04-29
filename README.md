@@ -53,7 +53,7 @@ In this repository you will find raw data (.csv and .xlsx files) and code for an
 As above 
 
  :file_folder:
-* **code for analyses**
+* **code**
 
 `BTprocessR.R`
 
