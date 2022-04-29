@@ -5,11 +5,11 @@
 #  Function and process for calculating disparity (Procrustes distances)     #
 #       Code from Ryan Felice: Felice RN, Watanabe A, Cuff AR, Hanson M,     #
 #        Bhullar B-AS, Rayfield ER, et al. (2020) Decelerated dinosaur       #
-#        skull evolution with the origin of birds. PLoS Biol 18(8): e3000801.# 
-#        https://doi.org/10.1371/journal.pbio.3000801                        #
+#        skull evolution with the origin of birds. PLoS Biol 18(8):          #
+#       e3000801: https://doi.org/10.1371/journal.pbio.3000801               #
+#                                                                            #
 #                                                                            #
 ##############################################################################
-
 
 
 calcGamma <- function(Gamma0,Lsubk3,U,dims,stepsize=1)
