@@ -1,17 +1,14 @@
 
-#########################################################
-#
-#  Process and visualise the results from Bayes Traits 
-#
 ##########################################################
-
-
-
+#                                                        #
+#  Process and visualise the results from Bayes Traits   #
+#                                                        #
+##########################################################
 
 library(BTprocessR)
 library(dplyr)
 
-#Install BTprocessR package.... R version needs to be >3.6
+#Install BTprocessR package.... R version needs to be >3.6 for this part
 ##library(devtools)
 #install_github("hferg/BTprocessR")
 #Comparing model fit using marginal likelihoods and Bayes Factor
@@ -33,7 +30,6 @@ marginal_likelihoods <- getStones(stones, labels = c("BM", "BM_var", "Delta", "D
 marginal_likelihoods
 #Look at them stones.... I mean plot those Bayes Factors (Bayes factors > 6 should be supported)
 plot(marginal_likelihoods)
-
 
 
 post <- loadPosterior("Lambda_whole_var.txt.Log.txt")
