@@ -22,29 +22,27 @@ Brian Beatty,
 __To cite the paper__: 
 
 >Coombs EJ, Felice RN, Clavel J, Park T, Bennion R, Churchill M, Geisler J, Beatty B, Goswami A. The tempo of cetacean cranial evolution. Current Biology. 2022.
-Github: https://github.com/EllenJCoombs/Asymmetry-evolution-cetaceans plus the Zenodo DOI: https://doi.org/10.5281/zenodo.3893943
-
-Available at: 
+Details available at: https://github.com/EllenJCoombs/Cetacean_cranial_evolutions
 
 If using any of this code or data please cite the paper above and this repo
 
 __To cite this repo__: 
 
->
+Github: https://github.com/EllenJCoombs/Cetacean_cranial_evolutions plus the Zenodo DOI: XXXX
 
-DOI: 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3893943.svg)](https://doi.org/10.5281/zenodo.3893943)
 
 
 ## Data :bar_chart: :chart_with_downwards_trend: 
 
-All data can be converted to .csv for use in R
-
 The data are provided in the `Raw data` folder
-1. 
-2. 
-3. 
-4. 
-5. 
+1. `absent.csv`- bones that are variably present in some species 
+2. `new curves_archs_odonts.csv` - LM and curve configuration used for archaeocetes and odontocetes 
+3. `new curves_mysts.csv` - LM and curve configuration used for mysticetes 
+4. `Table S1` - All ecological data 
+5. `Table S3` - LM and curve descriptions 
+6. `Table S4` - Centroid size
+
 
 ## Analysis :chart_with_upwards_trend:
 In this repository you will find raw data (.csv and .xlsx files) and code for analyses (code supplied as .R files)
@@ -57,8 +55,10 @@ As above
  :file_folder:
 * **code for analyses**
 
+
+
 ## License :page_with_curl:
-This project is licensed under the X License - see 
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/EllenJCoombs/Asymmetry-evolution-cetaceans/blob/master/LICENSE) file for details
 
 ## Session Info :clipboard:
 For reproducibility purposes, here is the output of `devtools::session_info()` used to perform the analyses in the publication. 
