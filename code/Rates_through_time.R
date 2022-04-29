@@ -321,3 +321,6 @@ spheres3d(final_mirrored_odonts[occipcon,,17], radius =  2, color = "turquoise")
 spheres3d(final_mirrored_odonts[parietal,,17], radius =  2, color = "black")
 spheres3d(final_mirrored_odonts[zygo_squa,,17], radius = 2, color = "darkred")
 #spheres3d(shapedata[zygo,,42], radius =  0.0002, color = "magenta")
+
+
+
