@@ -1,11 +1,11 @@
 
-###########################################
-#                                         #
-#     Read in your tree and species data  #
-#     specific to mysticetes, archs,      #
-#     odonts                              #
-#                                         #
-###########################################
+#############################################
+#                                           #
+#     Read in your tree and species data    #
+#     specific to mysticetes, archs,        #
+#     odonts                                #
+#                                           #
+#############################################
 
 
 library(geomorph)
