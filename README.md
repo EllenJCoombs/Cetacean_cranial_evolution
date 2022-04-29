@@ -58,7 +58,7 @@ As above
 
 
 ## License :page_with_curl:
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/EllenJCoombs/Asymmetry-evolution-cetaceans/blob/master/LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/EllenJCoombs/Cetacean_cranial_evolution/blob/main/LICENSE) file for details
 
 ## Session Info :clipboard:
 For reproducibility purposes, here is the output of `devtools::session_info()` used to perform the analyses in the publication. 
