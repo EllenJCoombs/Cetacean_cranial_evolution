@@ -28,9 +28,9 @@ If using any of this code or data please cite the paper above and this repo
 
 __To cite this repo__: 
 
-Github: https://github.com/EllenJCoombs/Cetacean_cranial_evolutions plus the Zenodo DOI: XXXX
+Github: https://github.com/EllenJCoombs/Cetacean_cranial_evolutions plus the Zenodo DOI: 
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3893943.svg)](https://doi.org/10.5281/zenodo.3893943)
+
 
 
 ## Data :bar_chart: :chart_with_downwards_trend: 
