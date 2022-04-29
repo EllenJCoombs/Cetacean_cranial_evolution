@@ -55,7 +55,18 @@ As above
  :file_folder:
 * **code for analyses**
 
-
+`BTprocessR.R`
+`BayesTraits.R`
+`BayesTraits_distributions.R`
+`BayesTraits_rates_phylo.R`
+`Binary_ASCII_ply.R`
+`Disparity.R`
+`Import_resample_slide_LMs.R`
+`Mirroring.R`
+`Rates_through_time.R`
+`Regions.R`
+`ResamplingV3.R`
+`Slider3d_2.R`
 
 ## License :page_with_curl:
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/EllenJCoombs/Cetacean_cranial_evolution/blob/main/LICENSE) file for details
