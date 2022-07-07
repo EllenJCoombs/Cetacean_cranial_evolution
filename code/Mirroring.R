@@ -11,7 +11,6 @@
 #removing the fake midline landmarks is carried out after mirroring (see below)
 
 slidedlms_fake <- Shape_data_with_bilats
-#slidedlms_fake[c(80:82,87:119),,]<-NA 
 
 open3d();spheres3d(slidedlms_fake[,,1])
 left.curves<-c(1:64)
@@ -36,7 +35,7 @@ add_col_or_row = function(x, n = 1, add_col = T, fill = 0)
         c(nrow(x) + ((!add_col) * n), ncol(x) + (add_col * n), dim(x)[3]))
 }
 specimens2<-add_col_or_row(slidedlms_fake,n=num.missing,add_col=FALSE,fill=NA)
-specimens2[c(80:82,87:119),,]<-NA
+specimens2[c(80:82,87:119),,]<-NA #LMs to be mirrored
 dimnames(specimens2)[3]<-dimnames(slidedlms_fake)[3]
 #bilats <- read.csv('bilats.csv')
 bilats<-cbind(leftside,rightside)
