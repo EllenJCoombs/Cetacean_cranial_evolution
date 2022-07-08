@@ -82,6 +82,59 @@ spheres3d(final_mirrored_odonts[c(124:458),,2],col='blue',radius=4)
 spheres3d(final_mirrored_odonts[c(459:1113),,2],col='yellow',radius=4)
 spheres3d(final_mirrored_odonts[c(1114:1448),,2],col='blue',radius=4)
 spheres3d(final_mirrored_odonts[c(1449:2028),,2],col='yellow',radius=4)
+              
+              
+#######################################################
+#                                                     #
+#      MIRRORING SYMMETRIC SPECIMENS LANDMARKS        #
+#                                                     #
+#######################################################
+
+## REMEMBER THE MIDLINE IS DIFFERENT ##
+
+#These data are slid with the fake landmarks 
+slidedlmsMYSTS_fake <- Shape_data_with_bilats
+slidedlmsMYSTS_fake[c(67:123),,]<-NA
+
+#slidedlmsARCHS_fake <- Shape_data_with_bilats
+#slidedlmsARCHS_fake[c(67:123),,]<-NA
+
+open3d();spheres3d(slidedlmsMYSTS_fake[,,1])
+left.curves<-c(1:64)
+left.lm <- c(1:37,39,41:47,50,52,53,57:60,62:66)
+right.lm <- c(67:123)
+left.curve.list<-unlist(my_curves$Curve.in[left.curves])
+leftside<-c(left.lm,left.curve.list) # RHS LMs+ RHS curves+all patch points
+num.missing<-(length(leftside)-length(right.lm)) # number of LMs to create= total RHS-current LHS LMs
+blanks<-c((dim(slidedlmsMYSTS_fake)[1]+1):(dim(slidedlmsMYSTS_fake)[1]+num.missing))
+# to fill in blanks from one row past the last current point, for the number of rows needed (num.missing)
+rightside<-c(right.lm,blanks)
+add_col_or_row = function(x, n = 1, add_col = T, fill = 0)
+{
+  m1 = matrix(x, ncol = if(add_col) nrow(x) * ncol(x) else nrow(x), byrow = T)
+  m2 = matrix(fill, nrow = if(add_col) dim(x)[3] else prod(dim(x)[-1]),
+              ncol = if(add_col) nrow(x) * n else n)
+  array(t(cbind(m1, m2)),
+        c(nrow(x) + ((!add_col) * n), ncol(x) + (add_col * n), dim(x)[3]))
+}
+specimens2<-add_col_or_row(slidedlmsMYSTS_fake,n=num.missing,add_col=FALSE,fill=NA)
+dimnames(specimens2)[3]<-dimnames(slidedlmsMYSTS_fake)[3]
+bilats<-cbind(leftside,rightside)
+newarray<-mirrorfill(specimens2,l1=midline,l2=bilats)
+dimnames(newarray)[3]<-dimnames(slidedlmsMYSTS_fake)[3]
+
+
+#Double check the extra landmarks
+open3d();
+spheres3d(newarray[c(1:123),,11],radius=9, col = 'green')
+spheres3d(newarray[c(1114:1115),,11],radius=9, col = 'red')
+spheres3d(newarray[bilats[,1],,11],col='red',radius=10)
+spheres3d(newarray[bilats[,2],,11],col='blue',radius=10)
+
+
+#Remove the extra fake landmarks first 
+final_mirrored_mysts=newarray[-c(1114:1115),,]              
+              
 
 ###################################################
 #                                                 #
