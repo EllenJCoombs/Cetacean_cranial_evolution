@@ -12,6 +12,7 @@ library(dplyr)
 ##library(devtools)
 #install_github("hferg/BTprocessR")
 #Comparing model fit using marginal likelihoods and Bayes Factor
+
 #Make a list of all the Stone files
 stones <- c(file=paste("BM_whole_var.txt.Stones.txt"),
             file=paste("BM_var_whole_var.txt.Stones.txt"),
