@@ -43,6 +43,8 @@ marginal_likelihoods
 plot(marginal_likelihoods)
 
 
+#What estimation of the model do you get? How strong is it? 
+# E.g. 'Lambda was estimated as 0.69 for the whole skull, suggesting a moderately high level of phylogenetic signal'
 post <- loadPosterior("Lambda_whole_var.txt.Log.txt")
 plot(post)
 mean(post$Lambda)
