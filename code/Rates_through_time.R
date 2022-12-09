@@ -11,13 +11,9 @@ library(BTRTools)
 library(ggplot2)
 library(phytools)
 
-#tree - BE CARFEUL 
 treeA <- treeODONTS
-#treeA<-read.nexus("D:/BayesTraitsV2/hackett250.nex")
-#Post prob data
-#rjpp.output<-rjpp("D:/BayesTraitsV2/rostrumpcsscaledhack.txt.PP.txt","D:/BayesTraitsV2/rostrumpcsscaledhack.txt.PP.trees",treeA)
-#rjpp.output<-rjpp("D:/BayesTraitsV2/braincasepcsscaledkappa.txt.PP.txt","D:/BayesTraitsV2/braincasepcsscaledkappa.txt.PP.trees",treeARCHS)
-#rjpp.output<-rjpp("D:/BayesTraitsV2/rostrumpcsscaledelt.txt.PP.txt","D:/BayesTraitsV2/rostrumpcsscaleddelt.txt.PP.trees",treeA)
+
+#Run the function before pulling out the individual bones (see below function)
 
 rttplotter<-function(rjpp.output,treeA){
 
@@ -265,19 +261,22 @@ zg<-rttplotter2(rjpp.output = zygo_BTraits, treeA = treeA, module.name = "zygoma
 zs<-rttplotter2(rjpp.output = zygo_squa_BTraits, treeA = treeA, module.name = "squamosal (with zygomatic process)")
 #wo<-rttplotter2(rjpp.output = whole_BTraits, treeA = treeA, module.name = "whole")
 
-#you can get the age of any node using the branching times function 
+#Side note - you can get the age of any node using the branching times function if you want to take a look at ages
 branching.times(treeARCHS)
 #remember the counting rules for nodes (above) So the node numbered #tips + 1 is the root node
 
+#I had to add this because the archaeocetes die in the Oligocene - i.e their end date is not the present - ignore if don't have extinct sister taxa
 node_ages=as.data.frame(branching.times(treeARCHS))
 
 node_ages[row.names(node_ages) == findMRCA(treeARCHS, c(treeARCHS$tip.label[1],treeARCHS$tip.label[5])),]
 
+#This is just a test - use df3 below instead
 dud<-join_all(list(mx,pr,fr,jg), by="mya")
 
 library(plyr)
 library(dplyr)
 library(reshape2)
+#Join the data from the bones you want to plot 
 df3<-join_all(list(bs, bo, fr, jg, mp, mx, na, oc, pa, pl, pr, pt, so, sq, zg, zs), by="mya")
 ratedata<-melt(df3, id.vars = "mya")
 
@@ -292,8 +291,7 @@ ggplot(ratedata, aes(x = mya, y = value, colour=variable)) + geom_line(size=2) +
   scale_y_continuous(limit = c(0.2, 6))
 
 
-
-#All rates for the skulls 
+#All rates for the skulls - whole skull for each suborder
 ggplot() +
   geom_line(data = whole_ARCHS, aes(x = mya, y = rates)) + geom_line(size=2) + # must include argument label "data"
   geom_line(data = whole_MYSTS, aes(x = mya, y = rates)) + geom_line(size=2) +
@@ -304,8 +302,7 @@ ggplot() +
   theme_classic()
 
 
-
-
+#Just double checking that the individual bones look right - feel free to ignore 
 spheres3d(final_mirrored_odonts[nas,,17], radius = 2, color = "red")
 spheres3d(final_mirrored_odonts[premax,,17], radius =  2, color = "darkblue")
 spheres3d(final_mirrored_odonts[maxilla,,17], radius =2, color = "lightgreen")
@@ -320,7 +317,7 @@ spheres3d(final_mirrored_odonts[jug,17], radius =  2, color = "coral")
 spheres3d(final_mirrored_odonts[occipcon,,17], radius =  2, color = "turquoise")
 spheres3d(final_mirrored_odonts[parietal,,17], radius =  2, color = "black")
 spheres3d(final_mirrored_odonts[zygo_squa,,17], radius = 2, color = "darkred")
-#spheres3d(shapedata[zygo,,42], radius =  0.0002, color = "magenta")
+spheres3d(shapedata[zygo,,42], radius =  0.0002, color = "magenta")
 
 
 
