@@ -2,6 +2,7 @@
 ##########################################
 #                                        #
 #  Relative rates through time plotter   #
+#        Modififed by E Coombs           #
 #                                        #
 ##########################################
 
