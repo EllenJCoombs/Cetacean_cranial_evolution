@@ -81,11 +81,9 @@ plylist <-  dir(plyfolder, pattern='.ply', recursive=F)
 plylist2<-gsub(pattern="\\.ply$","",plylist)
 setdiff(plylist2,ptslist2) #should be zero if all matching up OK
 #######NOTE
-#####my plys are awkwardly in a folder called  "C:/Data/whale_ply/ply/ply"
 ##### I am setting the working directory ONE FOLDER UP from where the meshes are
 
 #mc.cores = 1 for WINDOWS. mc.cores = 3 for MAC
-####so for you it should be 
 
 #################################################
 #                                               #
@@ -129,8 +127,8 @@ slidedlms <- slid.lms$out
 checkLM(slidedlms,path="./ply/", pt.size = 2,suffix=".ply",render="s", begin = 5)
 
 
-slidedlmsSCHIZO<- slidedlms
-save(slidedlmsSCHIZO, file = 'slidedlmsSCHIZO.R')
+slidedlmsFINAL<- slidedlms
+save(slidedlmsFINAL, file = 'slidedlmsFINAL.R') #Final data set
 
 
 #####################
