@@ -155,7 +155,7 @@ final_mirrored_mysts=newarray[-c(1114:1115),,]
 #IMPORTANT - CHECK FIRST WHAT ORDER YOUR LMS ARE IN (I AM NOT SURE IF YOU LMed IN THE SAME WAY AS ME)
 #Easy way to check your landmark ordering is: 
               
-text3d(final_mirrored_mysts[c(1L123),,11], text = 1:123)
+text3d(final_mirrored_mysts[c(1:123),,11], text = 1:123) #this pulls out landmarks 1:123 on specimen 11 and labels them in order 
 
 #Slot in the landmarks 
 #You can use abind to bind datasets - this rearranges the data into the same order as the mysts (i.e. without the weird 1-120, 2 = 121, 19 - 122, 20 -123)
