@@ -9,6 +9,7 @@ library(devtools)
 install_github("hferg/BTprocessR")
 library(BTprocessR)
 library(dplyr)
+library(reshape2)
 
 #Install BTprocessR package.... R version needs to be >3.6 for this part
 ##library(devtools)
