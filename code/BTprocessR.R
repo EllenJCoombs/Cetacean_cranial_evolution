@@ -5,6 +5,8 @@
 #                                                        #
 ##########################################################
 
+library(devtools)
+install_github("hferg/BTprocessR")
 library(BTprocessR)
 library(dplyr)
 
